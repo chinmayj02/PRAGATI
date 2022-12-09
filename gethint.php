@@ -1,6 +1,6 @@
 <?php
 // Array with names
-$a[] = "Apple";
+$a[] = "Apple" ;
 $a[] = "Banana";
 $a[] = "Pears";
 $a[] = "Pumpkin";
