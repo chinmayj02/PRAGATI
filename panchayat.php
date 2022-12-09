@@ -122,7 +122,7 @@ if (isNaN(num)){
 </head>
 <body background="background.jpg">
 
-<form action="" method="POST" name="valp" onsubmit="return validatep()">
+<form action="panchayat.php" method="POST" name="valp" onsubmit="return validatep()">
     <div class="container">
     <h1>PANCHAYAT</h1>
     <hr>
@@ -141,8 +141,6 @@ if (isNaN(num)){
 <input type="text" id="panchayat" name="SPanchayat" placeholder="State"> 
 <label><b>Panchayat Program: </b> </label>
 <br>
-<input type="Radio" id="panchayat" name="HANDS on TRAINING" >Hands On Training <br>
-<input type="Radio" id="panchayat" name="WORKSHOP" > Workshop<br>
  
 
 
@@ -157,24 +155,46 @@ if (isNaN(num)){
 </body>
 </html>
 <?php
-include 'connection.php';
-if(isset($_POST['submit'])){
+$insert = false;
+if(isset($_POST['Panchayat'])){
+    // Set connection variables
+    $server = "localhost";
+    $username = "root";
+    $password = "";
+    $database="pragati";
 
+    // Create a database connection
+    $con = mysqli_connect($server, $username, $password,$database);
 
-$pname=$_POST['Panchayat']; 
-$pdate=$_POST['Program'];
-$country=$_POST['CPanchayat'];
-$state=$_POST['SPanchayat'];
-$pemail=$_POST['emailp'];
-//$programme_name=$_POST['Panchayat'];
+    // Check for connection success
+    if(!$con){
+        die("connection to this database failed due to" . mysqli_connect_error());
+    }
+     echo "Success connecting to the db";
 
-$insertquery="INSERT INTO `panchayat`(`Panchayat_Name`, `date_of_prog`, `country`, `state`, `panchayat_email`) VALUES ('$pname','$pdate','$country','$state','$pemail')";
-$result=mysqli_query($con,$insertquery); 
-if($result){
-  ?> 
-  <script> 
-    alert("data  inserted");
-  </script>
-  <?php 
-} 
-}?>
+    // Collect post variables
+    $Panchayat = $_POST['Panchayat'];
+    $Program = $_POST['Program'];
+    $CPanchayat = $_POST['CPanchayat'];
+    $SPanchayat = $_POST['SPanchayat'];
+    $emailp = $_POST['emailp'];
+    //$Hands = $_POST['Hands'];
+   
+    $sql = "INSERT INTO `pragati`.`panchayat` (`Panchayat_Name`, `date_of_prog`, `country`, `state`, `panchayat_email`) VALUES ('$Panchayat', '$Program', '$CPanchayat', '$SPanchayat', '$emailp');";
+    // echo $sql;
+
+    // Execute the query
+    if($con->query($sql) == true){
+         echo "Successfully inserted";
+
+        // Flag for successful insertion
+        $insert = true;
+    }
+    else{
+        echo "ERROR: $sql <br> $con->error";
+    }
+
+    // Close the database connection
+    $con->close();
+}
+?>
