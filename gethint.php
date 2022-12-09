@@ -13,6 +13,10 @@ $a[] = "Chickoo";
 $a[] = "Papaya";
 $a[] = "Leafy vegetables";
 $a[] = "Cashew";
+$a[] = "Vegetables";
+$a[] = "Fruits";
+$a[] = "Artifacts";
+
 
 
 // get the q parameter from URL
