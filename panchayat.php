@@ -124,7 +124,7 @@ if (isNaN(num)){
 
 <form action="panchayat.php" method="POST" name="valp" onsubmit="return validatep()">
     <div class="container">
-    <h1>PANCHAYAT</h1>
+    <h1>PANCHAYAT EVENT INFO</h1>
     <hr>
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="emailp" id="email" required>
