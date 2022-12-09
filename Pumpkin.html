@@ -1,0 +1,122 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+ background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.cardbtn {
+  background-color:rgb(37, 116, 161);
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.cardbtn:hover {
+background-color: #45a049
+}
+
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body background="background.jpg">
+
+
+<h1 style="text-align:center">PUMPKINS</h1>
+
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+    <img src="Long-Island-Cheese-Pumpkins.jpg" alt="Long-Island-Cheese-Pumpkins" style="width:100%"> 
+    
+      <h1>Long-Island-Cheese-Pumpkins</h1>
+      <h5>Price:Rs 200</h5>
+      <p>Long Island Cheese Pumpkins are also known as Cucurbita Moschata. These are one of the oldest pumpkin varieties in America. They grow short and flat, making them better for cooking than carving.</p>
+     <button class="cardbtn">Add to Cart</button>
+    </div>
+  </div>
+
+<div class="column">
+<div class="card">
+<img src="Ambercup-Squash.jpg" alt="AMBERCUP SQUASH" style="width:100%">
+  <h1>AMBERCUP SQUASH</h1>
+  <h5>Price:Rs 100</h5>
+      <p>Ambercup Squash also known as Japanese pumpkins grow to the 4–6-pound range. They have a green to orange skin, and are an oddity for a winter squash in that they can be eaten raw or cooked. Typically, only summer squash can really be eaten raw.
+  </p>
+  <p><button class='cardbtn'>Add to Cart</button></p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+  <img src="Lumina-Pumpkins.jpg" alt="Lumina-Pumpkins" style="width:100%">
+     <h1>Lumina-Pumpkins </h1>
+     <h5>Price:Rs 120</h5>
+      <p>Lumina Pumpkins are yet another white (sort of Ivory colored) pumpkin with a smooth skin and 10-15 pound weight. Great for Fall décor, but also good to bake with. They are also called ghost, white, and full moon pumpkins. For culinary uses they are similar to butternut squash </p> 
+  <button class='cardbtn'>Add to Cart</button>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+<img src="pie-Pumpkin.jpg" alt="Pie-Pumpkin" style="width:100%">
+      <h3>PIE PUMPKINS</h3>
+      <h5>Price:Rs 150</h5>
+      <p>Pie Pumpkins come in the same bright orange shade as traditional pumpkins, but they’re smaller and rounder. As their name suggests, they are perfect for baking! Their sweet flavor makes them great for pureeing and using in pies, muffins, cupcakes, and a lot more. They’re also not as stringy as traditional pumpkins!
+
+</p>
+<button class='cardbtn'>Add to Cart</button>
+    </div>
+  </div>
+
+
+</div>
+</body>
+</html>
