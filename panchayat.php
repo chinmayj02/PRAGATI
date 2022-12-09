@@ -126,11 +126,8 @@ if (isNaN(num)){
     <div class="container">
     <h1>PANCHAYAT</h1>
     <hr>
-
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="emailp" id="email" required>
-
-
 <label><b>Panchayat Name: </b> </label>
 <input type="text" id="panchayat" name="Panchayat" placeholder="panchayat name">  
 <label><b>Program Date: </b> </label>
@@ -140,7 +137,10 @@ if (isNaN(num)){
 <label><b>State: </b> </label>
 <input type="text" id="panchayat" name="SPanchayat" placeholder="State"> 
 <label><b>Panchayat Program: </b> </label>
+<input type="text" id="panchayat" name="Panchayat program" placeholder="Program"> 
 <br>
+<label for="appt"><b>Time:</b></label>
+  <input type="time" id="appt" name="appt">
  
 
 
