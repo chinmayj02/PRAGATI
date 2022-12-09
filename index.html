@@ -208,6 +208,23 @@
             .sidenav a {font-size: 18px;}
           }
         </style>
+        <script>
+          function showHint(str) {
+            if (str.length == 0) {
+              document.getElementById("txtHint").innerHTML = "";
+              return;
+            } else {
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("txtHint").innerHTML = this.responseText;
+                }
+              };
+              xmlhttp.open("GET", "gethint.php?q=" + str, true);
+              xmlhttp.send();
+            }
+          }
+          </script>
 </head>
 
 <body class='overflow-x-hidden'>
@@ -247,9 +264,10 @@
                   <a href="#">What do we sell?</a>
                   <div class="search-container">
                     <form action="/action_page.php">
-                      <input type="text" placeholder="Search.." name="search">
+                      <input type="text" placeholder="Search.." name="search" onkeyup="showHint(this.value)">
                       <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
+                    <p>Suggestions: <span id="txtHint"></span></p>
                   </div>
                  </header>
                 <hr>
