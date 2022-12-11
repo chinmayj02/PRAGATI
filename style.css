@@ -11,7 +11,7 @@ html {
     repeat:no-repeat;
     
   }
-  
+ 
   #stars {
     width: 1px;
     height: 1px;
@@ -63,12 +63,13 @@ html {
     box-shadow: 741px 948px #FFF , 1939px 1217px #FFF , 317px 776px #FFF , 1896px 601px #FFF , 1834px 1615px #FFF , 1939px 443px #FFF , 1166px 433px #FFF , 1588px 24px #FFF , 658px 18px #FFF , 1758px 188px #FFF , 1132px 1381px #FFF , 1599px 346px #FFF , 1210px 812px #FFF , 1072px 540px #FFF , 711px 1292px #FFF , 61px 516px #FFF , 468px 1319px #FFF , 503px 1937px #FFF , 758px 1563px #FFF , 1799px 1321px #FFF , 938px 210px #FFF , 288px 1366px #FFF , 1548px 1673px #FFF , 1369px 1875px #FFF , 780px 1747px #FFF , 1177px 1707px #FFF , 912px 699px #FFF , 1884px 1085px #FFF , 358px 1850px #FFF , 636px 448px #FFF , 1457px 799px #FFF , 1259px 1959px #FFF , 294px 1410px #FFF , 1053px 840px #FFF , 1255px 21px #FFF , 1016px 164px #FFF , 44px 1946px #FFF , 1601px 340px #FFF , 1704px 726px #FFF , 1988px 373px #FFF , 767px 886px #FFF , 1075px 1177px #FFF , 228px 241px #FFF , 771px 1063px #FFF , 892px 516px #FFF , 364px 1191px #FFF , 1028px 1727px #FFF , 1067px 520px #FFF , 198px 43px #FFF , 904px 373px #FFF , 1663px 262px #FFF , 1703px 1258px #FFF , 561px 349px #FFF , 1840px 1286px #FFF , 301px 114px #FFF , 1820px 1455px #FFF , 1879px 1515px #FFF , 1793px 44px #FFF , 1851px 1217px #FFF , 1611px 359px #FFF , 509px 1386px #FFF , 75px 1644px #FFF , 260px 1867px #FFF , 83px 1639px #FFF , 268px 1920px #FFF , 3px 699px #FFF , 738px 788px #FFF , 1084px 672px #FFF , 476px 443px #FFF , 202px 1333px #FFF , 633px 1609px #FFF , 1854px 1192px #FFF , 1728px 996px #FFF , 1767px 744px #FFF , 1348px 1507px #FFF , 431px 632px #FFF , 1556px 1816px #FFF , 290px 256px #FFF , 1100px 340px #FFF , 8px 230px #FFF , 1786px 555px #FFF , 872px 1578px #FFF , 1258px 658px #FFF , 161px 968px #FFF , 150px 336px #FFF , 1222px 1937px #FFF , 1649px 529px #FFF , 402px 912px #FFF , 793px 1681px #FFF , 1688px 1806px #FFF , 265px 969px #FFF , 1177px 1473px #FFF , 567px 238px #FFF , 1725px 638px #FFF , 472px 1695px #FFF , 917px 901px #FFF , 287px 104px #FFF , 1743px 95px #FFF , 1446px 366px #FFF , 1044px 1549px #FFF;
   }
   
-  #title {
+  /* #title {
     position: absolute;
     top: 50%;
     left: 0;
     right: 0;
-    color: #FFF;
+    color: black;
+    font-style: BOLD;
     text-align: center;
     font-family: "lato", sans-serif;
     font-weight: 300;
@@ -78,9 +79,10 @@ html {
     padding-left: 10px;
   }
   #title span {
-    background: -webkit-linear-gradient(white, #38495a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    
+   /* background: -webkit-linear-gradient(black, #38495a);
+   /* -webkit-background-clip: text;
+    /*-webkit-text-fill-color: transparent;*/
   }
   
   @keyframes animStar {
@@ -205,7 +207,7 @@ img {
   margin-bottom: 1.25rem;    
   font-weight: 400;
 }
-/*.made_by{
+.made_by{
   font-weight: 600;
   font-size: 683px;
  /* margin-top: 35px;
@@ -215,5 +217,5 @@ img {
   margin-top:89%;
    width: 100%;
    border: 10px solid black;
-}  */
+}  
 
