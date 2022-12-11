@@ -114,7 +114,7 @@ a {
     <p>Already have an account? <a href="login.html">Sign in</a>.</p>
   </div>
 
-<button type="submit" class="registerbtn" name="submit">Register</button></div>
+<button type="submit" class="registerbtn" name="submit"><a href="supplier.php" class="remove">Register</a></button></div>
 </form>
 
 </body>
