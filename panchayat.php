@@ -1,204 +1,142 @@
-<!DOCTYPE html>
-<html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
-   background-repeat:no-repeat;
-    background-size:cover;
-
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-  background-color: white;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password],input[type=number]{
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for the submit button */
-.loginbtn {
-  background-color:rgb(37, 116, 161);
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.loginbtn:hover {
-background-color: #45a049
-}
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-
-
-</style>
-<script type="text/javascript">
-
- // function validatep()
-  {
-    firstname=document.valp.Panchayat.value
-    if(firstname >=65 && firstname <=90 || firstname >= 97 && firstname <= 122)
-    { 
-      return true;
-    }
-    else
-    {
-    alert("Invalid  Panchayat name");
-    return false;
-    }
-    lastname=document.valp.SPanchayat.value
-    if(lastname >=65 && lastname <=90 || lastname >= 97 && lastname <= 122)
-    { 
-      return true;
-    }
-    else
-    {
-    alert("Invalid State");
-    return false;
-    }
-    address=document.valp.CPanchayat.value
-    if(address >=65 && address <=90 || address >= 97 && address <= 122)
-    { 
-      return true;
-    }
-    else
-    {
-    alert("Invalid country");
-    return false;
-    }
-email=document.valp.emailp.value
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
-  {
-    return (true)
-  }
-  else{
-    alert("You have entered an invalid email address!")
-    return (false)
-  }
-  var num=document.valp.program.value;  
-if (isNaN(num)){  
-  alert("Enter a proper date ")
-  return false;  
-}else{  
-  return true;  
-  }  
-  }
-</script>
-</head>
-<body background="background.jpg">
-
-<form action="panchayat.php" method="POST" name="valp" onsubmit="return validatep()">
-    <div class="container">
-    <h1>PANCHAYAT EVENT INFO</h1>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   
-<div class="row">
-  <div class="form-group col-md-4">
-  <label><b>Email: </b> </label>
-    <input type="text" placeholder="Enter Email" name="emailp" id="email" required></div>
-    <div class="form-group col-md-4">
-<label><b>Panchayat Name: </b> </label>
-<input type="text" id="panchayat" name="Panchayat" placeholder="panchayat name"> </div>
-<div class="form-group col-md-4"> 
-<label><b>Program Date: </b> </label>
-<input type="date" id="program" name="Program" placeholder="program date"> <br></div></div>
-<label><b>Country: </b> </label>
-<input type="text" id="panchayat" name="CPanchayat" placeholder="Country"> 
-<label><b>State: </b> </label>
-<input type="text" id="panchayat" name="SPanchayat" placeholder="State"> 
-<label><b>Panchayat Program: </b> </label>
-<input type="text" id="panchayat" name="Panchayat program" placeholder="Program"> 
-<br>
-<label for="appt"><b>Time:</b></label>
-  <input type="time" id="appt" name="appt">
- 
-
-
-
-    <button type="submit" class="loginbtn" name="submit">Submit</button>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Producer Awareness</title>
+  </head> 
     
-    
+  <body class="container bg-light">
+    <!-- Start Header form -->
+    <div class="text-center pt-5">
+      <!-- <img src="logo.jpeg" alt="network-logo" width="140" height="140" /> -->
+      <h2>PANCHAYAT EVENT INFORMATION</h2>
+    </div>
+    <!-- End Header form -->
+  
+    <!-- Start Card -->
+    <div class="card">
+      <!-- Start Card Body -->
+      <div class="card-body">
+        <!-- Start Form -->
+        <form id="LoginForm" action="#" method="" class="needs-validation" novalidate autocomplete="off">
+          <!-- Start Input Name -->
+          <div class="row">
+            <div class="form-group col-md-4">
+            <label for="inputId">Email:</label>
+            <input type="text" class="form-control" id="inputid" name="emailp" placeholder="Your Id" required />
+            <small class="form-text text-muted">Please fill the email-Id</small>
+          </div> 
+          <div class="form-group col-md-4">
+            <label for="inputaccode">Panchayat Name: </label>
+            <input type="text" class="form-control" id="inputcode" name="Panchayat" placeholder="Panchayat name" required />
+            <small class="form-text text-muted">Please fill the panchayat name</small>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputaccname">Program Date: </label>
+            <input type="date" class="form-control" id="inputacc-name" name="Program" placeholder="Programme date" required />
+            <small class="form-text text-muted">Please select the date</small>
+          </div>
+          <div class="form-group col-md-4">
+                 
+            <label for="inputcap">Programme time: </label>
+            <input type="TIME" class="form-control" id="inputc" name="ptime" placeholder="Total Capacity" required />
+            <small class="form-text text-muted">Please select the programme time</small>
+          </div> 
+          <!-- <div class="row">
+            <div class="form-group col-md-4">
+            
+              <label for="inputbstatus">Building Status </label>
+              <br><select id="bldg-status" name="bldg-status">
+              <option>Select Building Status</option>
+              <option value="Active">Active</option>
+              <option value="Permanently Closed">Permanently Closed</option>
+              <option value="Temporarily Closed">Temporarily Closed</option>
+            </select></div> -->
+            <div class="form-group col-md-4">
+              <label for="inputbstatus">Country:</label>
+              <br> <select id="gen" name="CPanchayat">
+               <option>Select Country</option>
+               <option value="1">India</option>
+             </select></div>  
+              <!-- <div class="form-group col-md-4">
+            
+                <label for="inputbstatus">Gender:</label>
+               <br> <select id="gen" name="gen">
+                <option>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select></div> </div> -->
+              
+                <div class="form-group col-md-4">
+                 
+                  <label for="inputbstatus">State:</label>
+                  <br> <select id="gen" name="SPanchayat">
+                   <option>Select State</option>
+                   <option value="1">Goa</option>
+                   <option value="2">Maharastra</option>
+                   <option value="3">Kerala</option>
+                   <option value="4">Delhi</option>
+                   <option value="5">Hyderabad</option>
+                   <option value="Other">Andhra Pradesh</option>
+                   <option value="Other">Assam</option>
 
-</div>
-</form>
 
-</body>
-</html>
-<?php
-$insert = false;
-if(isset($_POST['Panchayat'])){
-    // Set connection variables
-    $server = "localhost";
-    $username = "root";
-    $password = "";
-    $database="pragati";
 
-    // Create a database connection
-    $con = mysqli_connect($server, $username, $password,$database);
+                 </select></div>
+              
+                <div class="form-group col-md-4">
+                
+                  <label for="inputbstatus">Panchayat Program type:</label>
+                  <br> <select id="gen" name="Panchayat program">
+                   <option>Select type</option>
+                   <option value="1">Hands on training</option>
+                   <option value="2">Workshop</option>
+                   <option value="Other">Other</option>
+                 </select></div> 
+                </div>
+               
+                
+            
+         <!-- Start Submit Button --><center>
+         <button class="visible" class="btn btn-primary btn-block col-lg-2" name="submit" type="submit">Submit</button>
+         <!-- End Submit Button --></center>
 
-    // Check for connection success
-    if(!$con){
-        die("connection to this database failed due to" . mysqli_connect_error());
-    }
-     echo "Success connecting to the db";
-
-    // Collect post variables
-    $Panchayat = $_POST['Panchayat'];
-    $Program = $_POST['Program'];
-    $CPanchayat = $_POST['CPanchayat'];
-    $SPanchayat = $_POST['SPanchayat'];
-    $emailp = $_POST['emailp'];
-    //$Hands = $_POST['Hands'];
-   
-    $sql = "INSERT INTO `pragati`.`panchayat` (`Panchayat_Name`, `date_of_prog`, `country`, `state`, `panchayat_email`) VALUES ('$Panchayat', '$Program', '$CPanchayat', '$SPanchayat', '$emailp');";
-    // echo $sql;
-
-    // Execute the query
-    if($con->query($sql) == true){
-         echo "Successfully inserted";
-
-        // Flag for successful insertion
-        $insert = true;
-    }
-    else{
-        echo "ERROR: $sql <br> $con->error";
-    }
-
-    // Close the database connection
-    $con->close();
-}
-?>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="emp.js"></script>
+    <!-- Start Scritp for Form -->
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+    <!-- End Scritp for Form -->
+    <footer>
+        <div class="my-4 text-muted text-center">
+          <p>© pragati</p>
+        </div>
+      </footer>
+  </body> 

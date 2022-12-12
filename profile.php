@@ -1,126 +1,163 @@
-<!DOCTYPE html>
-<html>
+
+
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
- background-repeat:no-repeat;
-    background-size:cover;
-
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-  background-color: white;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] ,input[type=number]{
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for the submit button */
-.registerbtn {
-  background-color:rgb(37, 116, 161);
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.registerbtn:hover {
-background-color: #45a049
-}
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-  background-color: #f1f1f1;
-  text-align: center;
-}
-</style>
-</head>
-<body background="background.jpg">
-
-<form action="" method="POST">
-  <div class="container">
-    <h1>Register</h1>
-    <p>Please fill in this form to create an account.</p>
-    <hr>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Producer Awareness</title>
+  </head> 
     
-    <label><b> FNAME : </b> </label>   
-<input type="text" name="name" placeholder= "name"  /> 
+  <body class="container bg-light">
+    <!-- Start Header form -->
+    <div class="text-center pt-5">
+      <!-- <img src="logo.jpeg" alt="network-logo" width="140" height="140" /> -->
+      <h2>PRODUCER REGISTRATION</h2>
+    </div>
+    <!-- End Header form -->
+  
+    <!-- Start Card -->
+    <div class="card">
+      <!-- Start Card Body -->
+      <div class="card-body">
+        <!-- Start Form -->
+        <form id="LoginForm" action="" method="post" class="needs-validation" novalidate autocomplete="off">
+          <!-- Start Input Name -->
+          <div class="row">
+            <div class="form-group col-md-4">
+                 
+                <label for="inputcap">First name </label>
+                <input type="text" class="form-control" id="inputc" name="name" placeholder="First name" required />
+                <small class="form-text text-muted">Please select the programme time</small>
+              </div> 
+              <div class="form-group col-md-4">
+                 
+                <label for="inputcap">Last name </label>
+                <input type="text" class="form-control" id="inputc" name="name" placeholder="Last name" required />
+                <small class="form-text text-muted">Please write last name</small>
+              </div> 
+              <div class="form-group col-md-4">
+                 
+                <label for="inputcap">Producer Id </label>
+                <input type="text" class="form-control" id="inputc" name="ID" placeholder="Producer Id"/>
+                <small class="form-text text-muted">Please select the programme time</small>
+              </div> 
+            <div class="form-group col-md-4">
+            <label for="inputId">Email:</label>
+            <input type="text" class="form-control" id="inputid" name="email" placeholder="Your Id" required />
+            <small class="form-text text-muted">Please fill the email-Id</small>
+          </div> 
+          <div class="form-group col-md-4">
+            <label for="inputaccode">Password: </label>
+            <input type="password" class="form-control" id="inputcode" name="psw" placeholder="Password" required />
+            <small class="form-text text-muted">Please fill password</small>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputaccname">Confirm Password: </label>
+            <input type="password" class="form-control" id="inputacc-name" name="psw-repeat" placeholder="Confirm password" required />
+            <small class="form-text text-muted">Please cpnfirm the password</small>
+          </div>
+          
+              <div class="form-group col-md-4">
+                 
+                <label for="inputcap">Phone </label>
+                <input type="phone" class="form-control" id="inputc" name="phone" placeholder="phone" required />
+                <small class="form-text text-muted">Please fill the phone</small>
+              </div> 
+              <div class="form-group col-md-4">
+                 
+                <label for="inputcap">Village name </label>
+                <input type="text" class="form-control" id="inputc" name="vname" placeholder="Village name" required />
+                <small class="form-text text-muted">Please fill the village name</small>
+              </div> 
+            <div class="form-group col-md-4">
+              <label for="inputbstatus">Country:</label>
+              <br> <select id="gen" name="addr">
+               <option>Select Country</option>
+               <option value="1">India</option>
+             </select></div>  
+              <!-- <div class="form-group col-md-4">
+            
+                <label for="inputbstatus">Gender:</label>
+               <br> <select id="gen" name="gen">
+                <option>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select></div> </div> -->
+              
+                <div class="form-group col-md-4">
+                 
+                  <label for="inputbstatus">State:</label>
+                  <br> <select id="gen" name="addr">
+                   <option>Select State</option>
+                   <option value="1">Goa</option>
+                   <option value="2">Maharastra</option>
+                   <option value="3">Kerala</option>
+                   <option value="4">Delhi</option>
+                   <option value="5">Hyderabad</option>
+                   <option value="Other">Andhra Pradesh</option>
+                   <option value="Other">Assam</option>
 
-<br>
-<label><b> LNAME : </b> </label>   
-<input type="text" name="name" placeholder= "name"  /> 
 
-<br>
-<label><b>Producer ID:</b></label>     
-<input type="number" name="ID" placeholder="ID." />
-<br>
-<label><b>PHONE :</b></label> 
-<input type="number" name="phone" placeholder="Phone no." /> 
-    <br>
-  <label><b>VILLAGE NAME : </b> </label>   
-<input type="text" name="vname" placeholder= "Village name"  />
-<label><b>COUNTRY : </b> </label>   
-<input type="text" name="addr" placeholder= "Country"  />
-<label><b>STATE: </b> </label>   
-<input type="text" name="addr" placeholder= "State"  />
-<label><b>Panchayat name(if attended any programme):</b></label>     
-<input type="text" name="pnm" placeholder="panchayat name" />
-<br>
-  <div class="container signin">
-    <p>Already have an account? <a href="login.html">Sign in</a>.</p>
-  </div>
 
-<button type="submit" class="registerbtn" name="submit"><a href="supplier.php" class="remove">Register</a></button></div>
-</form>
+                 </select></div>
+              
+                 <div class="form-group col-md-4">
+                 
+                    <label for="inputcap">Panchayat name </label>
+                    <input type="text" class="form-control" id="inputc" name="pnm" placeholder="Panchayat name" required />
+                    <small class="form-text text-muted">Please fill the panchayat name</small>
+                  </div> 
+               
+                
+                  <div class="container signin">
+                    <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+                  </div>
+                
+         <!-- Start Submit Button --><center>
+         <button class="visible" class="btn btn-primary btn-block col-lg-2" name="submit" type="submit">Submit</button>
+         <!-- End Submit Button --></center>
 
-</body>
-
-</html>
-<?php
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="emp.js"></script>
+    <!-- Start Scritp for Form -->
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+    <!-- End Scritp for Form -->
+    <footer>
+        <div class="my-4 text-muted text-center">
+          <p>© pragati</p>
+        </div>
+      </footer>
+  </body> 
+  <?php
 include 'connection.php';
 if(isset($_POST['submit'])){
 
