@@ -99,7 +99,7 @@ a {
 <input type="text" name="addr" placeholder= "State"  />
 <label><b>PHONE :</b></label>     
 <input type="number" name="phone" placeholder="Phone no." /> 
-    <button type="submit" class="registerbtn" name="submit">Register</button>
+<button type="submit" class="registerbtn" name="submit">Register</button>
   
   <div class="container signin">
     <p>Already have an account? <a href="login.html">Sign in</a>.</p>
