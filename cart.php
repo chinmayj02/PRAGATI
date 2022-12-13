@@ -111,7 +111,7 @@ span.price {
 }
 </style>
 </head>
-<body background="background.jpg">
+<body background="bg1.jpg">
 <div class="row">
   <div class="col-75">
     <div class="container">
