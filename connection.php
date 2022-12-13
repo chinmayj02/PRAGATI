@@ -3,7 +3,7 @@ $username="root";
 $password="";
 $server='localhost';
 $db='pragati';
-$con=  new mysqli($server,$username,$password,$db);
+$con=  mysqli_connect($server,$username,$password,$db);
 if($con){
 
     echo "Connection Sucessfull :))";

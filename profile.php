@@ -25,7 +25,7 @@
       <!-- Start Card Body -->
       <div class="card-body">
         <!-- Start Form -->
-        <form id="LoginForm" action="" method="post" class="needs-validation" novalidate autocomplete="off">
+        <form id="LoginForm" action="profile.php" method="post" class="needs-validation" novalidate autocomplete="off">
           <!-- Start Input Name -->
           <div class="row">
             <div class="form-group col-md-4">
@@ -172,7 +172,7 @@ $state=$_POST['addr'];
 $pname=$_POST['pnm']; 
 $password=$_POST['psw'];
 $repass=$_POST['psw-repeat'];
-$insertquery="INSERT INTO `producer`(`Id`, `fname`, `lname`, `Plocation`, `p_email`, `phone`, `country`, `state`, `panchayat_nm`) VALUES ('$id','$fname','$lname','$plocation','$email','$phone','$country','$state','$pname')";
+$insertquery="INSERT INTO `producer`(`Id`, `fname`, `lname`, `Plocation`, `p_email`, `phone`, `country`, `state`, `panchayat_nm`,`password`, `conf_password`) VALUES ('$id','$fname','$lname','$plocation','$email','$phone','$country','$state','$pname','$password',$repass)";
 $result=mysqli_query($con,$insertquery); 
 if($result){
   ?> 

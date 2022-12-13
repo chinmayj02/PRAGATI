@@ -22,7 +22,7 @@
       <!-- Start Card Body -->
       <div class="card-body">
         <!-- Start Form -->
-        <form id="LoginForm" action="#" method="" class="needs-validation" novalidate autocomplete="off">
+        <form id="LoginForm" action="panchayat.php" method="post" class="needs-validation" novalidate autocomplete="off">
           <!-- Start Input Name -->
           <div class="row">
             <div class="form-group col-md-4">
@@ -77,13 +77,13 @@
                   <label for="inputbstatus">State:</label>
                   <br> <select id="gen" name="SPanchayat">
                    <option>Select State</option>
-                   <option value="1">Goa</option>
-                   <option value="2">Maharastra</option>
-                   <option value="3">Kerala</option>
-                   <option value="4">Delhi</option>
-                   <option value="5">Hyderabad</option>
-                   <option value="Other">Andhra Pradesh</option>
-                   <option value="Other">Assam</option>
+                   <option value="Goa">Goa</option>
+                   <option value="Maharsatra">Maharastra</option>
+                   <option value="Kerala">Kerala</option>
+                   <option value="Delhi">Delhi</option>
+                   <option value="Hyderabad">Hyderabad</option>
+                   <option value="Andhra Pradesh">Andhra Pradesh</option>
+                   <option value="Assam">Assam</option>
 
 
 
@@ -92,10 +92,10 @@
                 <div class="form-group col-md-4">
                 
                   <label for="inputbstatus">Panchayat Program type:</label>
-                  <br> <select id="gen" name="Panchayat program">
+                  <br> <select id="gen" name="Panchayat_program">
                    <option>Select type</option>
-                   <option value="1">Hands on training</option>
-                   <option value="2">Workshop</option>
+                   <option value="Hands on training">Hands on training</option>
+                   <option value="Workshop">Workshop</option>
                    <option value="Other">Other</option>
                  </select></div> 
                 </div>
@@ -140,3 +140,27 @@
         </div>
       </footer>
   </body> 
+  <?php
+include 'connection.php';
+if(isset($_POST['submit'])){
+
+
+$pname=$_POST['Panchayat']; 
+$pdate=$_POST['Program'];
+$country=$_POST['CPanchayat'];
+$state=$_POST['SPanchayat'];
+$pemail=$_POST['emailp'];
+$ptime=$_POST['ptime'];
+$panchayat_program_type=$_POST['Panchayat_program'];
+//$programme_name=$_POST['Panchayat'];
+
+$insertquery="INSERT INTO `panchayat`(`Panchayat_Name`, `date_of_prog`, `country`, `state`, `panchayat_email`,`programme_name`,`time_of_program`) VALUES ('$pname','$pdate','$country','$state','$pemail','$panchayat_program_type','$ptime')";
+$result=mysqli_query($con,$insertquery); 
+if($result){
+  ?> 
+  <script> 
+    alert("data  inserted");
+  </script>
+  <?php 
+} 
+}?>
