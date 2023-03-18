@@ -1,0 +1,116 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-repeat:no-repeat;
+    background-size:cover;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+.cardbtn {
+  background-color:rgb(37, 116, 161);
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.cardbtn:hover {
+background-color: #45a049
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+h1{
+  color:white;
+}
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body background="bg1.jpg">
+
+<h1 style="text-align:center">BELL PEPPERS</h1>
+
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <img src="redpeppers.jpeg" alt="RED PEPPERS" style="width:100%">
+      <h3>Red Bell Peppers</h3>
+      <h5>Price:Rs 60</h5>
+      <p>The Red Bell, also known as the King of the Grill. Among the sweetest of all Bell Peppers, Red Bells go through the full process of ripening, allowing the natural sugars to enter the fruit to give them their signature sweet and fruity flavor. This ripening process also makes Red Bell Peppers very nutritious, packing each fruit with more beta-carotene, vitamin A, and vitamin C (more than a large orange!).</p>
+    <button class='cardbtn'>Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="yellowpeppers.jpeg" alt="YELLOW PEPPERS" style="width:100%">
+      <h3>Yellow Bell Peppers</h3>
+      <h5>Price:Rs 60</h5>
+      <p>The Yellow Bell Peppers’ sweet taste and high nutritional content makes it many people’s go-to Pepper. Harvested from the vine once they’ve reached maturity, Yellow Bells are full of vitamin C (5 times your recommended daily amount!), niacin, and folate.  flavor—perfect for roasting or grilling on the BBQ for a sweet summer taste all year round.Like other Bell Peppers, they’re highly versatile and add a great pop of colors to our pasta .Again produced in organic manner and are very tasty. </p>
+      <button class='cardbtn'>Add to Cart</button>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="orangepeppers.jpeg" alt="ORANGE PEPPERS" style="width:100%">
+      <h3>Orange Bell Peppers</h3>
+      <h5>Price:Rs 100</h5>
+      <p>Orange Bell Peppers have a tangy, fruity taste, making them sweeter than Green Bells, and much more similar to Yellow and Red Bells’ fruity flavor. Just like its closely-related yellow family member, Orange Bell Peppers are a good source of folic acid, antioxidants, fiber, and iron,</p>
+      <button class='cardbtn'>Add to Cart</button>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+<img src="longsweetpeppers.jpeg" alt="LONG SWEET PEPPERS" style="width:100%">
+      <h3>Long Sweet Peppers</h3>
+      <h5>Price:Rs 120</h5>
+      <p>Versatile, colorful, and delicious, Long Sweet Peppers make a perfect addition to any dish. Long Sweet Peppers are packed with tons of nutrients, including vitamin C, vitamin A, and fiber, making them a super healthy choice.Their thinner skin compared to other types of Peppers make them quick to cook—so you can throw them on the BBQ to roast, grill, or sauté. Or if you prefer your Peppers raw, they make a healthy and convenient snack you can enjoy at home or on-the-go. Whichever way you prefer to eat them, Long Sweet Peppers are tasty and nutritious.</p>
+      <button class='cardbtn'>Add to Cart</button>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

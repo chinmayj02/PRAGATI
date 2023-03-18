@@ -43,6 +43,7 @@ Item name      </th>
   Description
 </th>   
 <th>Image</th>
+<th>Add to cart</th>
  </tr>
   </thead>
   <tbody> 
@@ -63,8 +64,8 @@ foreach($query_run as $row){
         <img src="upload/<?php echo $row['Image'] ;?>" max-width="20%">
       </td>
       <td> 
-        
-    
+        <td><a href="cart.php" style="font-size:35px;">Add to cart</a></td>
+  
 
     </tr>
  <?php 
